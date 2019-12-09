@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bealdung.cxf.rest</groupId>
+	<artifactId>apache-cxf-rest-api-jetty</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Simple CXF JAX-RS webapp service using java annotations -https://www.baeldung.com/apache-cxf-rest-api</name>
+	<description>Simple CXF JAX-RS webapp service using jetty server and no spring-xml configuration</description>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	<dependencies>
+	
+		<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>4.3.6.RELEASE</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>3.1.7</version>
+		</dependency>
+		
+		<!-- In this tutorial, we use CXF to create a Server endpoint to publish 
+			a web service instead of using a servlet container. Therefore, the following 
+			dependency needs to be included in the Maven POM file: -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http-jetty</artifactId>
+			<version>3.1.7</version>
+		</dependency>
+		
+		<!-- Finally, let's add the HttpClient library to facilitate unit tests: -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+
+		<!-- for JSON support in Apache-CXF Restful web service -->        
+        <dependency>
+	        <groupId>org.apache.cxf</groupId>
+	        <artifactId>cxf-rt-rs-extension-providers</artifactId>
+	        <version>3.0.2</version>
+	    </dependency>
+	
+	    <dependency>
+    <groupId>com.fasterxml.jackson.jaxrs</groupId>
+    <artifactId>jackson-jaxrs-json-provider</artifactId>
+    <version>2.3.2</version>
+</dependency>
+    
+	    <!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-mapper-asl</artifactId>
+		    <version>1.9.13</version>
+		</dependency>
+    
+    
+
+	</dependencies>
+
+</project>
